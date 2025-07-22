@@ -74,6 +74,60 @@ void right() {
   digitalWrite(STBY, HIGH);
 }
 
-void loop() {
+int Min = 1000;
+int Max = 0;
 
+void loop() {
+  // put your main code here, to run repeatedly:
+  Serial.println((String)analogRead(Line_Track_Left) + " " + (String)analogRead(Line_Track_Middle) + " " + (String)analogRead(Line_Track_Right));
+  //Code to slow down:
+  //analogWrite(ENA, 50);
+  //analogWrite(ENB, 50);
+
+  //Code to move foward
+  foward();
+
+  delay(2000);
+
+  //Code to stop
+  motion_stop();
+
+  delay(2000);
+
+  //Code to move backward
+  backward();
+
+  delay(2000);
+
+  //Code to stop
+  motion_stop();
+
+  delay(2000);
+
+  //Code to turn left
+  left();
+
+  delay(2000);
+
+  //Code to stop
+  motion_stop();
+
+  delay(2000);
+
+    //Code to turn right
+  right();
+
+  delay(2000);
+
+  //Code to stop
+  motion_stop();
+
+  delay(2000);
+
+  
+  Serial.println(
+    String(analogRead(Line_Track_Left)) + " " +
+    String(analogRead(Line_Track_Middle)) + " " +
+    String(analogRead(Line_Track_Right))
+  );
 }
