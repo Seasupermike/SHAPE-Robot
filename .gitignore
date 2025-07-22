@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/__vm
+/SHAPE-Program-Robot.sln
+/SHAPE-Program-Robot.vcxproj
+/SHAPE-Program-Robot.vcxproj.filters
